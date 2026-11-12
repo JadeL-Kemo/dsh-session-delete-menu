@@ -1,0 +1,9 @@
+# dsh-session-delete-menu bundle layer: mounted by `dsh plugin add`, so a
+# desktop profile gets this row without manual cordis.patch.yml edits.
+#
+# The host half is deliberately empty; the whole feature is a client-side
+# context-menu contribution that calls the route already provided by
+# dsh-web-mobile: POST /api/mobile-nav.session.delete.
+- insert:
+    - id: session-delete-menu
+      name: dsh-session-delete-menu

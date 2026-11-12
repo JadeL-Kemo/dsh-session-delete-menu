@@ -1,0 +1,61 @@
+{
+  "name": "dsh-session-delete-menu",
+  "version": "0.1.0",
+  "description": "Manual \"delete session\" action in the DSH desktop session context menu.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dsh": "0.2.2-rc.1",
+      "dshReleases": {
+        "0.2.2-rc.1": "compatible"
+      },
+      "profiles": [
+        "desktop",
+        "web"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "session",
+    "delete"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JadeL-Kemo/dsh-session-delete-menu.git"
+  },
+  "homepage": "https://github.com/JadeL-Kemo/dsh-session-delete-menu",
+  "bugs": {
+    "url": "https://github.com/JadeL-Kemo/dsh-session-delete-menu/issues"
+  },
+  "author": "JadeL-Kemo",
+  "license": "MIT"
+}
